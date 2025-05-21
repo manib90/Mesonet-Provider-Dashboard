@@ -57,15 +57,3 @@ Provider B,LA,Satellite,Inactive
 
 ## Screenshot of app
 
-## Proviers List
-![alt text](image.png)
-## Add Provider Form
-![alt text](image-1.png)
-## Edit Provider Form
-![alt text](image-2.png)
-## Delete Provider Page
-![alt text](image-3.png)
-## Upload Provider CSV File
-![alt text](image-4.png)
-## Providers Dashboard
-![alt text](image-5.png)
