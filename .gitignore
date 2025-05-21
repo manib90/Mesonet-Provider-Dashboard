@@ -1,0 +1,21 @@
+cat <<EOF > .gitignore
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.swp
+.DS_Store
+.env
+.idea/
+*.bak
+*.zip
+*.tar.gz
+*.rar
+node_modules/
+uploads/
+instance/
+EOF
