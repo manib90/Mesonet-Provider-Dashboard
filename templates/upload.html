@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Upload CSV{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <h1 class="mb-4">Upload Providers CSV</h1>
+        
+        (# enctype="multipart/form-data": Required for uploading files. #)
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+            <div class="mb-3">
+                {{ form.file.label(class="form-label") }}
+                {{ form.file(class="form-control") }}
+                {% if form.file.errors %}
+                    {% for error in form.file.errors %}
+                        <div class="text-danger small">{{ error }}</div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="{{ url_for('list_providers') }}" class="btn btn-secondary">Cancel</a>
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+
+        <div class="mt-4">
+            <h3>CSV Format Requirements</h3>
+            <ul class="list-group mb-3">
+                <li class="list-group-item">File must be in .csv format</li>
+                <li class="list-group-item">Required columns: name, location, category, status</li>
+                <li class="list-group-item">Status must be either 'Active' or 'Inactive'</li>
+            </ul>
+            <div class="card">
+                <div class="card-header">Example CSV Format</div>
+                <div class="card-body">
+                    <pre class="mb-0"><code>name,location,category,status
+Provider A,NYC,Weather,Active
+Provider B,LA,Satellite,Inactive</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

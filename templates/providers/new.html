@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}New Provider{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <h1 class="mb-4">Add New Provider</h1>
+        
+        {# novalidate disables browser-side HTML validation relying only on server-side validation,#}
+        <form method="POST" novalidate> 
+
+            {# csrf token generate and check if its valid #}
+            {{ form.csrf_token }}
+            {% if form.csrf_token.errors %}
+                <div class="alert alert-danger">
+                    CSRF token missing or invalid. Please try again.
+                </div>
+            {% endif %}
+
+            <div class="mb-3">
+                {{ form.name.label(class="form-label") }}
+                {{ form.name(class="form-control " + ("is-invalid" if form.name.errors else "")) }}
+                {% if form.name.errors %}
+                    <div class="invalid-feedback">
+                        {% for error in form.name.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                {{ form.location.label(class="form-label") }}
+                {{ form.location(class="form-control " + ("is-invalid" if form.location.errors else "")) }}
+                {% if form.location.errors %}
+                    <div class="invalid-feedback">
+                        {% for error in form.location.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                {{ form.category.label(class="form-label") }}
+                {{ form.category(class="form-control " + ("is-invalid" if form.category.errors else "")) }}
+                {% if form.category.errors %}
+                    <div class="invalid-feedback">
+                        {% for error in form.category.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                {{ form.status.label(class="form-label") }}
+                {{ form.status(class="form-control " + ("is-invalid" if form.status.errors else "")) }}
+                {% if form.status.errors %}
+                    <div class="invalid-feedback">
+                        {% for error in form.status.errors %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="{{ url_for('list_providers') }}" class="btn btn-secondary">Cancel</a>
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
