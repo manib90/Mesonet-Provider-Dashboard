@@ -57,20 +57,22 @@ Provider B,LA,Satellite,Inactive
 
 ## Screenshot of app
 
-## 📋 Providers List  
-![Providers List](https://drive.google.com/uc?id=1ciisx_prVv_YDUkCKEKlzUGPmEf9akrL)
+## 📸 Screenshot of App
 
-## ➕ Add Provider Form  
-![Add Provider Form](https://drive.google.com/uc?id=1uCyxphey0fSzYM9tsxANsCTmg-YkLbKW)
+### 📋 Providers List  
+![Providers List](https://private-user-images.githubusercontent.com/212729490/446172455-d060c615-6751-499a-8f46-315e0d73ebd8.png)
 
-## ✏️ Edit Provider Form  
-![Edit Provider Form](https://drive.google.com/uc?id=10bokjL6Dr8usWHotk89xhYqg9p9bqvzV)
+### ➕ Add Provider Form  
+![Add Provider Form](https://private-user-images.githubusercontent.com/212729490/446172458-1564e6ef-4750-4974-8eeb-41a74c3507d1.png)
 
-## ❌ Delete Provider Page  
-![Delete Provider Page](https://drive.google.com/uc?id=1S7JaK2RquFQj3x_LxsPGF_sGfSFWEFew)
+### ✏️ Edit Provider Form  
+![Edit Provider Form](https://private-user-images.githubusercontent.com/212729490/446172648-3d13dc40-08f2-44bb-b9fd-6bbdd4fe18ac.png)
 
-## 📤 Upload Provider CSV File  
-![Upload Provider CSV File](https://drive.google.com/uc?id=1OdkuzxLKIRGIWOmskgZS20oHI9SrJL3n)
+### ❌ Delete Provider Page  
+![Delete Provider Page](https://private-user-images.githubusercontent.com/212729490/446172454-3cdf3eb6-f4d2-4061-b608-97179d7d6540.png)
 
-## 📊 Providers Dashboard  
-![Providers Dashboard](https://drive.google.com/uc?id=1mRFZYwIHxHLHx33CLmHWo5HJ-NEYK6Ll)
+### 📤 Upload Provider CSV File  
+![Upload Provider CSV](https://private-user-images.githubusercontent.com/212729490/446172457-cdd33c0a-5ad3-4953-880a-acdd713cd014.png)
+
+### 📊 Providers Dashboard  
+![Providers Dashboard](https://private-user-images.githubusercontent.com/212729490/446172456-bf3b6e56-e92a-4bcc-b272-4668fa71eb9f.png)
