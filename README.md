@@ -57,26 +57,20 @@ Provider B,LA,Satellite,Inactive
 
 ## Screenshot of app
 
-## 📋 Providers List
+## 📋 Providers List  
+![Providers List](https://drive.google.com/uc?id=1ciisx_prVv_YDUkCKEKlzUGPmEf9akrL)
 
-![Providers List](https://drive.google.com/uc?export=view&id=1ciisx_prVv_YDUkCKEKlzUGPmEf9akrL)
+## ➕ Add Provider Form  
+![Add Provider Form](https://drive.google.com/uc?id=1uCyxphey0fSzYM9tsxANsCTmg-YkLbKW)
 
-## ➕ Add Provider Form
+## ✏️ Edit Provider Form  
+![Edit Provider Form](https://drive.google.com/uc?id=10bokjL6Dr8usWHotk89xhYqg9p9bqvzV)
 
-![Add Provider Form](https://drive.google.com/uc?export=view&id=1uCyxphey0fSzYM9tsxANsCTmg-YkLbKW)
+## ❌ Delete Provider Page  
+![Delete Provider Page](https://drive.google.com/uc?id=1S7JaK2RquFQj3x_LxsPGF_sGfSFWEFew)
 
-## ✏️ Edit Provider Form
+## 📤 Upload Provider CSV File  
+![Upload Provider CSV File](https://drive.google.com/uc?id=1OdkuzxLKIRGIWOmskgZS20oHI9SrJL3n)
 
-![Edit Provider Form](https://drive.google.com/uc?export=view&id=10bokjL6Dr8usWHotk89xhYqg9p9bqvzV)
-
-## ❌ Delete Provider Page
-
-![Delete Provider Page](https://drive.google.com/uc?export=view&id=1S7JaK2RquFQj3x_LxsPGF_sGfSFWEFew)
-
-## 📁 Upload Provider CSV File
-
-![Upload Provider CSV File](https://drive.google.com/uc?export=view&id=1OdkuzxLKIRGIWOmskgZS20oHI9SrJL3n)
-
-## 📊 Providers Dashboard
-
-![Providers Dashboard](https://drive.google.com/uc?export=view&id=1mRFZYwIHxHLHx33CLmHWo5HJ-NEYkGLi)
+## 📊 Providers Dashboard  
+![Providers Dashboard](https://drive.google.com/uc?id=1mRFZYwIHxHLHx33CLmHWo5HJ-NEYK6Ll)
