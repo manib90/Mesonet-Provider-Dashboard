@@ -9,13 +9,14 @@ from sqlalchemy import func
 from datetime import datetime, timedelta
 
 
-app = Flask(__name__)
+#app = Flask(__name__)
+app = Flask(__name__, instance_path="/tmp") 
 
 # Configuration
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key')
 #where to create/find the database
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['Database']
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('POSTGRES_URL', 'sqlite:///providers.db')
+#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('POSTGRES_URL', 'sqlite:///providers.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
