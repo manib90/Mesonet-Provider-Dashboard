@@ -14,7 +14,8 @@ app = Flask(__name__)
 # Configuration
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key')
 #where to create/find the database
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKVlZHR0pXMzlWQUoxSFYyRkVHQVQ0TlkiLCJ0ZW5hbnRfaWQiOiJmYzlhYmY5OTRmZGRhMTg2NDZiMmJkYTEyYjY1NmZkMDg5NjEyNTNkMTExMDJhOTNiMTYwMWVmN2Y0NzViYjZmIiwiaW50ZXJuYWxfc2VjcmV0IjoiYTU2MTQ2MjgtYjIyOS00MTJlLTg0NDItYzExODkzZGIwYmZkIn0.rAZq7eEOp778Zukbigm4UoEt6gdGvtBM00fzZiaEtmU', 'sqlite:///providers.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['Database']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('POSTGRES_URL', 'sqlite:///providers.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
