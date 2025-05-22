@@ -9,15 +9,34 @@ from sqlalchemy import func
 from datetime import datetime, timedelta
 
 
-#app = Flask(__name__)
-app = Flask(__name__, instance_path="/tmp") 
+# #app = Flask(__name__)
+# app = Flask(__name__, instance_path="/tmp") 
+
+# # Configuration
+# app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key')
+# #where to create/find the database
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['Database']
+# #app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('POSTGRES_URL', 'sqlite:///providers.db')
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Initialize Flask app with proper instance path for serverless environment
+app = Flask(__name__, instance_path="/tmp")
 
 # Configuration
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key')
-#where to create/find the database
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['Database']
-#app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('POSTGRES_URL', 'sqlite:///providers.db')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Database configuration with better error handling
+database_url = os.environ.get('Database')
+if database_url:
+    # Ensure proper format for SQLAlchemy (postgres:// -> postgresql://)
+    if database_url.startswith('postgres://'):
+        database_url = database_url.replace('postgres://', 'postgresql://', 1)
+    app.config['SQLALCHEMY_DATABASE_URI'] = database_url
+else:
+    # Fallback to SQLite if no database URL is provided
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///providers.db'
+    print("WARNING: Using SQLite database. Set 'Database' environment variable for production.")
+
 
 
 #Connects Flask-SQLAlchemy instance to Flask application
