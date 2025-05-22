@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 import csv
@@ -11,10 +12,11 @@ from datetime import datetime, timedelta
 app = Flask(__name__)
 
 # Configuration
-app.config['SECRET_KEY'] = 'your-secret-key'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your-secret-key')
 #where to create/find the database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///providers.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('POSTGRES_URL', 'sqlite:///providers.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 
 #Connects Flask-SQLAlchemy instance to Flask application
 db.init_app(app)
