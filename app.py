@@ -38,7 +38,6 @@ else:
     print("WARNING: Using SQLite database. Set 'Database' environment variable for production.")
 
 
-
 #Connects Flask-SQLAlchemy instance to Flask application
 db.init_app(app)
 
@@ -85,10 +84,30 @@ def new_provider():
             flash('An error occurred while adding the provider.', 'danger')
     return render_template('providers/new.html', form=form)
 
+# @app.route('/providers/<int:id>/edit', methods=['GET', 'POST'])
+# def edit_provider(id):
+#     provider = Provider.query.get_or_404(id) #retrieves data by id
+#     form = ProviderForm(obj=provider)        #pre-fills the form by provider data fetched
+    
+#     if form.validate_on_submit():
+#         try:
+#             provider.name = form.name.data
+#             provider.location = form.location.data
+#             provider.category = form.category.data
+#             provider.status = form.status.data
+#             db.session.commit()
+#             flash('Provider updated successfully!', 'success')
+#             return redirect(url_for('list_providers'))
+#         except Exception as e:
+#             db.session.rollback()
+#             flash('An error occurred while updating the provider.', 'danger')
+    
+#     return render_template('providers/edit.html', form=form, provider=provider)
 @app.route('/providers/<int:id>/edit', methods=['GET', 'POST'])
 def edit_provider(id):
-    provider = Provider.query.get_or_404(id) #retrieves data by id
-    form = ProviderForm(obj=provider)        #pre-fills the form by provider data fetched
+    provider = Provider.query.get_or_404(id)
+    # Pass provider_id to the form
+    form = ProviderForm(obj=provider, provider_id=id)
     
     if form.validate_on_submit():
         try:
@@ -104,6 +123,7 @@ def edit_provider(id):
             flash('An error occurred while updating the provider.', 'danger')
     
     return render_template('providers/edit.html', form=form, provider=provider)
+
 
 @app.route('/providers/<int:id>/delete', methods=['GET', 'POST'])
 def delete_provider(id):
